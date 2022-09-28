@@ -96,7 +96,6 @@ To use urls callbacks in order to get incoming Sms ,Sms delivery status ...You j
 ### Case Message delivery status :
 ```node.js
 var status_message =JSON.parse(req.query.status);
- ```
 status_message is an object like this:
 {
   "user":"SENDER_LOGIN",
