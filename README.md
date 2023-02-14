@@ -24,8 +24,10 @@ var data=JSON.stringify({
       }
     ]
   })
-
+var response=api.sendSmsApi(data);
+console.log(response)
 ```
+
 ```
 [
     {
