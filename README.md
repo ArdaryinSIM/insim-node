@@ -1,11 +1,11 @@
-# solo-api-node.js
+# insim-node.js
 # Installation
-npm install apisolo@1.0.0
+npm install insim@1.0.0
 # Usage
 ## Sending SMS
 ```node.js
-const apisolo=require('apisolo');
-var api =new apisolo()
+const insim=require('insim');
+var api =new insim()
 
 var data=JSON.stringify({
     "header": {
@@ -59,8 +59,8 @@ var contacts=JSON.stringify({
       }
     ]
   });
-const apisolo=require('apisolo');
-var api =new apisolo();
+const insom=require('insim');
+var api =new insim();
 var response=api.addContactApi(contacts);
 ```
 ```
