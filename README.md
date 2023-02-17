@@ -1,6 +1,6 @@
 # insim-node.js
 # Installation
-npm install insim@1.0.0
+npm i insim
 # Usage
 ## Sending SMS
 ```node.js
@@ -24,8 +24,9 @@ var data=JSON.stringify({
       }
     ]
   })
-var response=api.sendSmsApi(data);
-console.log(response)
+api.sendSmsApi(data,function(rep){
+console.log(rep)
+});
 ```
 
 ```
@@ -61,7 +62,9 @@ var contacts=JSON.stringify({
   });
 const insom=require('insim');
 var api =new insim();
-var response=api.addContactApi(contacts);
+ api.addContactApi(contacts,function(contact){
+   console.log(contact)
+ });
 ```
 ```
 Result example:
