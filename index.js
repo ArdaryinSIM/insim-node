@@ -1,4 +1,4 @@
-	
+  
 class Sms {
   constructor(id_sms_api, date_to_send,phone_number,message) {
     this.id_sms_api = id_sms_api;
@@ -10,13 +10,13 @@ class Sms {
    return this.id_sms_api;
   }
   getDateToSend(){
-  	return this.date_to_send;
+    return this.date_to_send;
   }
    getPhoneNumber(){
-  	return this.phone_number;
+    return this.phone_number;
   }
    getmessage(){
-  	return this.message;
+    return this.message;
   }
   setmessage(message) {
     this.message = message;
@@ -31,11 +31,11 @@ class Sms {
     this.phone_number = phone_number;
   }
   generateSmsArray(){
-  	var sms_array=[];
-  	sms_array.push(this.id_sms_api,this.date_to_send,this.phone_number,this.message)
+    var sms_array=[];
+    sms_array.push(this.id_sms_api,this.date_to_send,this.phone_number,this.message)
   return sms_array;
   }
-   sendSmsApi(data){
+   sendSmsApi(data,callback){
 var request = require('request');
 var options = {
   'method': 'POST',
@@ -47,11 +47,12 @@ var options = {
 
 };
 request(options, function (error, response) {
+  //console.log(response)
   if (error) throw new Error(error);
-  return response.body;
+  return callback(response.body);
 });
     }
-       addContactApi(data){
+       addContactApi(data,callback){
 var request = require('request');
 var options = {
   'method': 'POST',
@@ -64,7 +65,7 @@ var options = {
 };
 request(options, function (error, response) {
   if (error) throw new Error(error);
-  return response.body;
+  return callback(response.body);
 });
     }
 }
