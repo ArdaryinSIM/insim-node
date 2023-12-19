@@ -59,7 +59,7 @@ var contacts=JSON.stringify({
       }
     ]
   });
-const insom=require('insim');
+const insim=require('insim');
 var api =new insim();
  api.addContactApi(contacts,function(contact){
    console.log(contact)
