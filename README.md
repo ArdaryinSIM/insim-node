@@ -162,7 +162,6 @@ call  is an object like this:
     "CALL_TIME":"2019-07-05",
 
     "DURATION": "15:11:04"
-
  }
  ```
    ### Case GET CALL QUALIFICATION :
