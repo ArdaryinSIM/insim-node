@@ -68,7 +68,6 @@ var api =new insim();
 ```
 Result example:
  {  
-
         "data":{  
 
         "contact":[  
@@ -87,12 +86,9 @@ Result example:
 
         "result":"success"
 
-        }
-
-        ]
+        } ]
 
         }
-
         }
 ```        
 ## Urls Callback (You do not need to install api solo to use it)
