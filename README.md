@@ -47,8 +47,7 @@ console.log(rep)
 var contacts=JSON.stringify({
     "header": {
       "login": "user@gmail.com",
-      "password": "*******",
-      "api": true
+      "accessKey": "*******"
     },
     "contacts": [
       {
